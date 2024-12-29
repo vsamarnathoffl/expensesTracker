@@ -12,17 +12,21 @@ document.addEventListener('DOMContentLoaded',()=>{
         e.preventDefault();
         const expenseName = expenseInput.value.trim();
         const expenseAmount = parseFloat(amountInput.value);
-        expenseInput.value="";
-        amountInput.value="";
-        const newExpenses={
-            id:Date.now(),
-            name:expenseName,
-            amount:expenseAmount
-        }
+        if(expenseAmount>0){
+          expenseInput.value = "";
+          amountInput.value = "";
+          const newExpenses = {
+            id: Date.now(),
+            name: expenseName,
+            amount: expenseAmount,
+          };
 
-        expenses.push(newExpenses);
-        saveExpenses();
-        renderExpenses();
+          expenses.push(newExpenses);
+          saveExpenses();
+          renderExpenses();
+        }else{
+            alert("Amount should be greater than 0");
+        }
     });
 
     function renderExpenses(){
