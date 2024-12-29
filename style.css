@@ -1,0 +1,82 @@
+* {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        background-color: #1a1a1a;
+        color: white;
+        font-family: Arial, Helvetica, sans-serif;
+        height: 100vh;
+        width: 100vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .main-container {
+        padding: 20px;
+        border-radius: 10px;
+        background-color: #151515;
+        box-shadow: 0px 0px 5px 3px #222222;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 80%;
+        min-width: 300px;
+        max-width: 400px;
+      }
+      #form-container {
+        margin-top: 10px;
+        width: 100%;
+        display: grid;
+        grid-template-columns: 37% 37% 22%;
+        gap: 2%;
+      }
+      input {
+        background-color: #2c2c2c;
+        border: none;
+        border-radius: 5px;
+        padding: 5px 10px;
+        color:white;
+      }
+      input[type="submit"] {
+        white-space: normal;
+        text-align: center;
+        padding: 5px;
+        background-color: #820182;
+        color: white;
+      }
+      input:focus {
+        outline: none;
+      }
+      .expenses-container {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 20px;
+      }
+      #item-container {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        gap:10px;
+        margin:10px 0px;
+      }
+      #item-container div {
+        border-radius: 7px;
+        padding: 10px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #2c2c2c;
+        box-shadow: 0px 0px 1px 1px #151515;
+      }
+      #item-container div > button {
+        padding: 7px;
+        border-radius: 5px;
+        border: none;
+        background-color: #820182;
+        color: white;
+      }
