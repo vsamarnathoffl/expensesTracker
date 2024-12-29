@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded',()=>{
 
     let expenses= JSON.parse(localStorage.getItem("expenses")) ||[];
 
-    expenses.forEach(expense=>renderExpenses())
+    renderExpenses();
     formContainer.addEventListener('submit',(e)=>{
         e.preventDefault();
         const expenseName = expenseInput.value.trim();
@@ -49,8 +49,8 @@ document.addEventListener('DOMContentLoaded',()=>{
         })
     }
     function totalAmount(){
-        const total = expenses.reduce((sum,expense)=>sum+expense.amount,0);
-        totalExpenses.textContent=`${total}`;
+        let total = parseFloat(expenses.reduce((sum,expense)=>sum+expense.amount,0));
+        totalExpenses.textContent=`${total.toFixed(2)}`;
     }
     function saveExpenses(){
         localStorage.setItem("expenses",JSON.stringify(expenses));

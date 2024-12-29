@@ -46,9 +46,18 @@
         padding: 5px;
         background-color: #820182;
         color: white;
+        transition:transform 0.1s ease-in-out, background-color 0.1s ease-in-out;
       }
       input:focus {
         outline: none;
+      }
+      input[type="submit"]:hover,#item-container div > button:hover{
+        cursor: pointer;
+        background-color: #a002a0;
+        transform:scale(1.1);
+      }
+      input[type="submit"]:active,#item-container div > button:active{
+        transform:scale(0.95);
       }
       .expenses-container {
         width: 100%;
