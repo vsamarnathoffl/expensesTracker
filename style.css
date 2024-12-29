@@ -23,7 +23,7 @@
         justify-content: center;
         align-items: center;
         width: 80%;
-        min-width: 300px;
+        min-width: 310px;
         max-width: 400px;
       }
       #form-container {
@@ -79,4 +79,10 @@
         border: none;
         background-color: #820182;
         color: white;
+      }
+      @media(max-width:425px){
+        .main-container{
+          width:95%;
+          padding:10px 5px;
+        }
       }
